@@ -6,32 +6,159 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>scoop</title>
 </head>
 
 <body>
     <div class="main">
         <nav class="navbar">
-            <a href="" id="activate">Home</a>
-            <a href="" id="activate">About</a>
-            <a href="" id="activate">Works</a>
-            <a href="" id="activate">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#work">Works</a>
+            <a href="#contact">Contact</a>
         </nav>
         <div class="main__content">
-            <div class="header">
+            <div class="header" id="home">
                 <div class="header__img">
-                    <img src="https://images.pexels.com/photos/715546/pexels-photo-715546.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="">
                 </div>
                 <div class="header__content">
                     <h1>Hi, I am scoop</h1>
-                    <p class="typewrite" data-period="2000" data-type='[ "I am a web developer", "I love web designing", "I am also a gfx artist"]'>
-                    <span class="wrap"></span></p>
-                    <button>Know more</button>
+                    <p class="typewrite" data-period="2000"
+                        data-type='[ "I am a web developer", "I love web designing", "I am also a gfx artist"]'>
+                        <span class="wrap"></span>
+                    </p>
+                    <a href="#about"><button>Know more</button></a>
                 </div>
             </div>
         </div>
+
+        <!-- about -->
+        <div class="about" id="about">
+            <div class="about__content">
+                <div class="content__text" data-aos="slide-right">
+                    <h1>About me</h1>
+                    <p>I am a full stack web de
+                        veloper. I am a self learner and also working on some worthy projects. I have also
+                        contributed in many open source projects and also helped many people to build their dreams.
+                        I cannot make your dreams come true but I can make a platform where your hardwork can. This
+                        is not just a portfolio, this is a helping hand laid by me for you. I love to help others
+                        and also stay excited for new and challenging projects.</p>
+                </div>
+                <div class="content__img" data-aos="slide-left">
+                    <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="">
+                </div>
+            </div>
+            <div class="about__details">
+                <h1 data-aos="flip-up">Languages I use</h1>
+                <div class="languages">
+                    <div class="language__card">
+                        <img src="imgs/html.svg" alt="" data-aos="slide-left">
+                        <div class="content" data-aos="slide-right">
+                            <p>HTML (HyperText Markup Language) is the most basic building block of the Web. It
+                                defines the meaning and structure of web content.</p>
+                        </div>
+                    </div>
+                    <div class="language__card">
+                        <div class="content" data-aos="slide-left">
+                            <p>Cascading Style Sheets is a style sheet language used for describing the presentation
+                                of a document written in a markup language such as HTML.</p>
+                        </div>
+                        <img src="imgs/css.svg" alt="" data-aos="slide-right">
+                    </div>
+                    <div class="language__card">
+                        <img src="imgs/js.svg" alt="" data-aos="slide-left">
+                        <div class="content" data-aos="slide-right">
+                            <p>JavaScript, often abbreviated as JS, is a programming language that conforms to the
+                                ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and
+                                multi-paradigm.</p>
+                        </div>
+                    </div>
+                    <div class="language__card">
+                        <div class="content" data-aos="slide-left">
+                            <p>React is an open-source, front end, JavaScript library for building user interfaces
+                                or UI components. It is maintained by Facebook and a community of individual
+                                developers and companies.</p>
+                        </div>
+                        <img src="imgs/react.svg" alt="" data-aos="slide-right">
+                    </div>
+                    <div class="language__card">
+                        <img src="imgs/flask.svg" alt="" data-aos="slide-left">
+                        <div class="content" data-aos="slide-right">
+                            <p>Flask is a micro web framework written in Python. It is classified as a
+                                microframework because it does not require particular tools or libraries.</p>
+                        </div>
+                    </div>
+                    <div class="language__card">
+                        <div class="content" data-aos="slide-left">
+                            <p>Django is a Python-based free and open-source web framework that follows the
+                                model-template-views architectural pattern.</p>
+                        </div>
+                        <img src="imgs/django1.svg" alt="" data-aos="slide-right">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Works -->
+        <div class="works" id="work">
+            <div class="works__wrapper">
+                <h2 data-aos="flip-up">Some of my works</h2>
+                <div class="work__cards">
+                    <div class="work__card" data-aos="slide-right">
+                        <img src="imgs/instagram.svg" alt="">
+                        <h1>Instagram clone</h1>
+                        <p>This Instagram clone is made with react and firebase. This is a fully working clone.</p>
+                        <a href="https://github.com/RONITsingh-progamers/Instgram_clone" target="_blank">GitHub</a>
+                    </div>
+                    <div class="work__card" data-aos="flip-up">
+                        <img src="imgs/discord.svg" alt="">
+                        <h1>Discord clone</h1>
+                        <p>This Discord clone is made with react and firebase. This is a fully working clone of
+                            discord.</p>
+                        <a href="https://github.com/RONITsingh-progamers/Discord-_Clone-" target="_blank">GitHub</a>
+                    </div>
+                    <div class="work__card" data-aos="slide-left">
+                        <img src="imgs/facebook.svg" alt="">
+                        <h1>FaceBook clone</h1>
+                        <p>This FaceBook clone is made with django. Go and try this you won't regret.</p>
+                        <a href="https://github.com/RONITsingh-progamers/Instgram_clone" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="github__invite">
+                    <p>Get my more projects on my GitHub</p>
+                    <a href="https://github.com/sc0op-creator" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact" id="contact">
+            <div class="contact__wrapper">
+                <h1>Contact me</h1>
+                <form action="">
+                    <input type="email" placeholder="Enter your email" class="input">
+                    <textarea rows="10" placeholder="Enter your message" class="input"></textarea>
+                    <button>Send</button>
+                    <div class="profile__links">
+                        <a href="https://www.instagram.com/sc0op_creator/" target="_blank"><img src="imgs/instagram.svg" alt=""></a>
+                        <a href="https://twitter.com/sc0op2" target="_blank"><img src="imgs/twitter.svg" alt=""></a>
+                        <a href="https://github.com/sc0op-creator" target="_blank"><img src="imgs/github.svg" alt=""></a>
+                        <a href="https://discord.gg/UeWpgEMMEj" target="_blank"><img src="imgs/discord.svg" alt=""></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </div>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
