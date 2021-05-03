@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+body{
+    padding: 0%;
+    margin: 0;
+    font-family: 'Poppins' , sans-serif;
+    background: #111;
+    color: #fff;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    animation-name: fade-bottom;
+    animation-duration: 2.5s; 
+}
+@keyframes fade-bottom{
+    from {
+        top: -100%;
+        left: 0;
+    }
+    to{
+        top: 0;
+        left: 0;
+    }
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    transform: rotate(-90deg);
+    font-size: 30px;
+    transition: 0.1s ease-in;
+}
+.navbar a:hover{
+    text-decoration: line-through;
+    text-shadow: 0 0 15px #fff;
+}
+.main__content{
+}
+.main__content .header{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main__content .header .header__img{
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 100%;
+    animation-name: fade-in;
+    animation-duration: 2s; 
+}
+.main__content .header .header__img img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+}
+@keyframes fade-in{
+    from {
+        height: 0px;
+        width: 0px;
+    }
+    to{
+        height: 200px;
+        width: 200px;
+    }
+}
+.main__content .header .header__content{
+    margin-left: 20px;
+}
+.main__content .header .header__content h1{
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 0.1em;
+    animation-name: fade-left;
+    animation-duration: 5s; 
+}
+@keyframes fade-left{
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.main__content .header .header__content p{
+    font-size: 40px;
+    font-weight: 400;
+}
+.main__content .header .header__content button{
+    background: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+    animation-name: fade-up;
+    animation-duration: 2s; 
+}
+.main__content .header .header__content button:hover{
+    box-shadow: 0 0 15px #fff;
+}
+@media only screen and (max-width: 1600px) {
+    .main__content .header .header__content h1{
+      font-size: 90px;
+    }
+    .main__content .header .header__content p{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 1440px) {
+    .main__content .header .header__content h1{
+      font-size: 80px;
+    }
+    .main__content .header .header__content p{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .main__content .header .header__content h1{
+      font-size: 70px;
+    }
+    .main__content .header .header__content p{
+        font-size: 17px;
+    }
+}
