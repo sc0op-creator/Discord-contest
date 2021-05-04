@@ -55,4 +55,23 @@ window.onload = function() {
     document.body.appendChild(css);
 };
 
-// activate links 
+function showPopUp(){
+    var popUp = document.getElementById('popUp');
+    popUp.style.display = "block";
+};
+
+
+// Cursor
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+})
+
+document.addEventListener('click', () => {
+    cursor.classList.add("expand");
+
+    setTimeout(() => {
+        cursor.classList.remove("expand");
+    }, 500)
+})

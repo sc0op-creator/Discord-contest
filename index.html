@@ -12,7 +12,11 @@
 
 <body>
     <div class="main">
-        <nav class="navbar">
+        <div class="cursor"></div>
+        <div class="menu" id="menu__button">
+            <img src="imgs/bar.svg" alt="">
+        </div>
+        <nav class="navbar" id="navabr">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#work">Works</a>
@@ -30,9 +34,12 @@
                         data-type='[ "I am a web developer", "I love web designing", "I am also a gfx artist"]'>
                         <span class="wrap"></span>
                     </p>
-                    <a href="#about"><button>Know more</button></a>
                 </div>
             </div>
+            <svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px; animation: scroll ease 2s infinite;"/>
+                <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+            </svg>
         </div>
 
         <!-- about -->
@@ -112,20 +119,38 @@
                         <img src="imgs/instagram.svg" alt="">
                         <h1>Instagram clone</h1>
                         <p>This Instagram clone is made with react and firebase. This is a fully working clone.</p>
-                        <a href="https://github.com/RONITsingh-progamers/Instgram_clone" target="_blank">GitHub</a>
+                        <a href="https://github.com/RONITsingh-progamers/Instgram_clone" target="_blank">Check</a>
                     </div>
                     <div class="work__card" data-aos="flip-up">
                         <img src="imgs/discord.svg" alt="">
                         <h1>Discord clone</h1>
                         <p>This Discord clone is made with react and firebase. This is a fully working clone of
                             discord.</p>
-                        <a href="https://github.com/RONITsingh-progamers/Discord-_Clone-" target="_blank">GitHub</a>
+                        <a href="https://github.com/RONITsingh-progamers/Discord-_Clone-" target="_blank">Check</a>
                     </div>
                     <div class="work__card" data-aos="slide-left">
                         <img src="imgs/facebook.svg" alt="">
                         <h1>FaceBook clone</h1>
                         <p>This FaceBook clone is made with django. Go and try this you won't regret.</p>
-                        <a href="https://github.com/RONITsingh-progamers/Instgram_clone" target="_blank">GitHub</a>
+                        <a href="https://github.com/RONITsingh-progamers/Instgram_clone" target="_blank">Check</a>
+                    </div>
+                    <div class="work__card" data-aos="slide-right">
+                        <img src="imgs/twitter.svg" alt="">
+                        <h1>Twitter clone</h1>
+                        <p>This Twitter clone is made with flask. Flask has added more flexibility in this. Just go and check it.</p>
+                        <a href="https://github.com/Saumya-Bhatt/Twitter-Clone" target="_blank">Check</a>
+                    </div>
+                    <div class="work__card" data-aos="flip-up">
+                        <img src="imgs/slack.svg" alt="">
+                        <h1>Slack clone</h1>
+                        <p>This Slack clone is made with react and firebase. You cannot just differ between this and the original one.</p>
+                        <a href="https://github.com/lukejacksonn/react-slack-clone" target="_blank">Check</a>
+                    </div>
+                    <div class="work__card" data-aos="slide-left">
+                        <img src="imgs/netflix.svg" alt="">
+                        <h1>Netflix clone</h1>
+                        <p>This Netflix clone is also made with react and firebase. One more technology which is TMDB is used for fetching movie data.</p>
+                        <a href="https://github.com/AndresXI/Netflix-Clone" target="_blank">Check</a>
                     </div>
                 </div>
                 <div class="github__invite">
@@ -139,10 +164,14 @@
         <div class="contact" id="contact">
             <div class="contact__wrapper">
                 <h1>Contact me</h1>
-                <form action="">
-                    <input type="email" placeholder="Enter your email" class="input">
-                    <textarea rows="10" placeholder="Enter your message" class="input"></textarea>
-                    <button>Send</button>
+                <form>
+                    <label for="name">Name</label> 
+                    <input type="text" placeholder="Enter your name" class="input" id="name">
+                    <label for="email">Email</label> 
+                    <input type="email" placeholder="Enter your email" class="input" id="email">
+                    <label for="message">Message</label>
+                    <textarea rows="10" placeholder="Enter your message" class="input" id="message"></textarea>
+                    <button onclick="">Send</button>
                     <div class="profile__links">
                         <a href="https://www.instagram.com/sc0op_creator/" target="_blank"><img src="imgs/instagram.svg" alt=""></a>
                         <a href="https://twitter.com/sc0op2" target="_blank"><img src="imgs/twitter.svg" alt=""></a>
@@ -151,6 +180,9 @@
                     </div>
                 </form>
             </div>
+        </div>
+        <div class="popUp" id="popUp" onclick="showPopUp()">
+            <h1>Thanks a lot for you message.</h1>
         </div>
 
     </div>

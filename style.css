@@ -4,15 +4,15 @@ body{
     padding: 0%;
     margin: 0;
     font-family: 'Poppins' , sans-serif;
-    background: #111;
+    background: linear-gradient(to top, #000, #222);
     color: #fff;
 }
 html{
     scroll-behavior: smooth;
 }
-/* ::-webkit-scrollbar{
+::-webkit-scrollbar{
     display: none;
-} */
+}
 .main{
     overflow: hidden;
 }
@@ -46,8 +46,16 @@ html{
     transition: 0.1s ease-in;
 }
 .navbar a:hover{
+    transform: rotate(-85deg);
     text-decoration: line-through;
     text-shadow: 0 0 15px #fff;
+}
+.main__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
 }
 .main__content .header{
     height: 100vh;
@@ -55,6 +63,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 180px;
 }
 .main__content .header .header__img{
     height: 200px;
@@ -101,45 +110,6 @@ html{
 .main__content .header .header__content p{
     font-size: 40px;
     font-weight: 400;
-}
-.main__content .header .header__content button{
-    background: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 25px;
-    font-family: 'Poppins';
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s ease;
-    animation-name: fade-up;
-    animation-duration: 2s; 
-}
-.main__content .header .header__content button:hover{
-    box-shadow: 0 0 15px #fff;
-}
-@media only screen and (max-width: 1600px) {
-    .main__content .header .header__content h1{
-      font-size: 90px;
-    }
-    .main__content .header .header__content p{
-        font-size: 30px;
-    }
-}
-@media only screen and (max-width: 1440px) {
-    .main__content .header .header__content h1{
-      font-size: 80px;
-    }
-    .main__content .header .header__content p{
-        font-size: 20px;
-    }
-}
-@media only screen and (max-width: 1024px) {
-    .main__content .header .header__content h1{
-      font-size: 70px;
-    }
-    .main__content .header .header__content p{
-        font-size: 17px;
-    }
 }
 .about{
     display: flex;
@@ -221,14 +191,13 @@ html{
     font-size: 100px;
 }
 .work__cards{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .work__cards .work__card{
     background: #222;
-    padding: 20px;
-    margin: 10px;
+    padding: 30px;
+    margin: 7px;
 }
 .work__cards .work__card img{
     height: 100px;
@@ -246,6 +215,7 @@ html{
     box-shadow: 0 0 15px #fff;
 }
 .github__invite{
+    margin-top: 5px;
     width: 100%;
     background: #222;
     display: flex;
@@ -279,6 +249,10 @@ html{
     padding: 30px;
     margin-bottom: 50px;
 }
+.contact .contact__wrapper label{
+    font-size: 20px;
+    font-weight: 700;
+}
 .contact .contact__wrapper form .input{
     padding: 10px;
     background: none;
@@ -289,6 +263,8 @@ html{
     outline: none;
     color: #fff;
     transition: 0.2s ease;
+    margin-bottom: 20px;
+    padding-left: 0;
 }
 .contact .contact__wrapper form .input:hover{
     border-bottom: 5px rgb(175, 175, 175) solid;
@@ -319,4 +295,120 @@ html{
 }
 .contact .contact__wrapper .profile__links img{
     height: 50px;
+}
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(60px);
+	}
+}
+.popUp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    color: #111;
+    padding: 20px;
+    border-bottom: 10px solid #333;
+    transition: 0.2s ease;
+    display: none;
+}
+
+/* Cursor */
+.cursor {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+
+.menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+/* Adding responsiveness */
+@media only screen and (max-width: 1600px) {
+    .main__content .header .header__content h1{
+      font-size: 90px;
+    }
+    .main__content .header .header__content p{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 1440px) {
+    .main__content .header .header__content h1{
+      font-size: 80px;
+    }
+    .main__content .header .header__content p{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .main__content .header .header__content h1{
+      font-size: 70px;
+    }
+    .main__content .header .header__content p{
+        font-size: 17px;
+    }
+    .main__content .header{
+        flex-direction: column;
+    }
 }
