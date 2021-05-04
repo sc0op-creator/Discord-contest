@@ -75,3 +75,23 @@ document.addEventListener('click', () => {
         cursor.classList.remove("expand");
     }, 500)
 })
+
+// Menu
+
+function openMenu(){
+    var navbar = document.getElementById('navbar');
+    var menu = document.getElementById('menu');
+    var close = document.getElementById('close');
+    menu.style.display = 'none';
+    // navbar.style.top = 0;
+    navbar.style.left = 0;
+    close.style.display = 'block';
+}
+function closeMenu(){
+    var navbar = document.getElementById('navbar');
+    var menu = document.getElementById('menu');
+    var close = document.getElementById('close');
+    menu.style.display = 'block';
+    navbar.style.left = '-100%';
+    close.style.display = 'none';
+}

@@ -242,7 +242,6 @@ html{
 .contact .contact__wrapper form{
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content:center;
     width: 70%;
     background: #222;
@@ -278,7 +277,7 @@ html{
     font-weight: 700;
     transition: 0.2s ease;
     cursor: pointer;
-    width: 10%;
+    width: auto;
     margin-bottom: 20px;
 }
 .contact .contact__wrapper form button:hover{
@@ -303,18 +302,6 @@ html{
 	30% {
 		transform: translateY(60px);
 	}
-}
-.popUp {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    color: #111;
-    padding: 20px;
-    border-bottom: 10px solid #333;
-    transition: 0.2s ease;
-    display: none;
 }
 
 /* Cursor */
@@ -376,13 +363,15 @@ html{
 
 .expand {
     animation: cursorAnim3 .5s forwards;
-    border: 1px solid red;
+    border: 1px solid yellow;
 }
 
 .menu{
     position: fixed;
     left: 0;
     top: 0;
+    font-size: 35px;
+    display: none;
 }
 /* Adding responsiveness */
 @media only screen and (max-width: 1600px) {
@@ -410,5 +399,55 @@ html{
     }
     .main__content .header{
         flex-direction: column;
+    }
+    .menu{
+        display: block;
+        top: 10px;
+        left: 20px;
+        z-index: 5;
+    }
+    .navbar{
+        transition: 0.3s ease-in;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        left: -100%;
+        background: linear-gradient(to right top, #333 , #222);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation-name: none;
+        z-index: 4;
+    }
+    .navbar a{
+        transform: rotate(0deg)
+    }
+    .navbar a:hover{
+        transform: rotate(5deg)
+    }
+    .about .about__content{
+        width: 100%;
+    }
+    .about__details h1{
+        font-size: 70px;
+        font-weight: 600;
+    }
+    .works .works__wrapper h2{
+        font-size: 70px;
+        font-weight: 600;
+    }
+    .about__details .languages{
+        width: 100%;
+    }
+    .works .works__wrapper{
+        width: 90%;
+    }
+    .works .works_wrapper .work__cards{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
     }
 }

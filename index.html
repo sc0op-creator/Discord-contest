@@ -7,20 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>scoop</title>
 </head>
 
 <body>
     <div class="main">
         <div class="cursor"></div>
-        <div class="menu" id="menu__button">
-            <img src="imgs/bar.svg" alt="">
+        <div class="menu">
+            <i class="fas fa-bars" id="menu" onclick="openMenu()"></i>
+            <i class="fas fa-times" id="close" style="display: none;" onclick="closeMenu()"></i>
         </div>
-        <nav class="navbar" id="navabr">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#work">Works</a>
-            <a href="#contact">Contact</a>
+        <nav class="navbar" id="navbar">
+            <a href="#home" onclick="closeMenu()">Home</a>
+            <a href="#about" onclick="closeMenu()">About</a>
+            <a href="#work" onclick="closeMenu()">Works</a>
+            <a href="#contact" onclick="closeMenu()">Contact</a>
         </nav>
         <div class="main__content">
             <div class="header" id="home">
@@ -36,9 +39,14 @@
                     </p>
                 </div>
             </div>
-            <svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-                <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px; animation: scroll ease 2s infinite;"/>
-                <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+            <svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                <path id="wheel" d="M123.359,79.775l0,72.843"
+                    style="fill:none;stroke:#fff;stroke-width:20px; animation: scroll ease 2s infinite;" />
+                <path id="mouse"
+                    d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
+                    style="fill:none;stroke:#fff;stroke-width:20px;" />
             </svg>
         </div>
 
@@ -137,19 +145,22 @@
                     <div class="work__card" data-aos="slide-right">
                         <img src="imgs/twitter.svg" alt="">
                         <h1>Twitter clone</h1>
-                        <p>This Twitter clone is made with flask. Flask has added more flexibility in this. Just go and check it.</p>
+                        <p>This Twitter clone is made with flask. Flask has added more flexibility in this. Just go and
+                            check it.</p>
                         <a href="https://github.com/Saumya-Bhatt/Twitter-Clone" target="_blank">Check</a>
                     </div>
                     <div class="work__card" data-aos="flip-up">
                         <img src="imgs/slack.svg" alt="">
                         <h1>Slack clone</h1>
-                        <p>This Slack clone is made with react and firebase. You cannot just differ between this and the original one.</p>
+                        <p>This Slack clone is made with react and firebase. You cannot just differ between this and the
+                            original one.</p>
                         <a href="https://github.com/lukejacksonn/react-slack-clone" target="_blank">Check</a>
                     </div>
                     <div class="work__card" data-aos="slide-left">
                         <img src="imgs/netflix.svg" alt="">
                         <h1>Netflix clone</h1>
-                        <p>This Netflix clone is also made with react and firebase. One more technology which is TMDB is used for fetching movie data.</p>
+                        <p>This Netflix clone is also made with react and firebase. One more technology which is TMDB is
+                            used for fetching movie data.</p>
                         <a href="https://github.com/AndresXI/Netflix-Clone" target="_blank">Check</a>
                     </div>
                 </div>
@@ -165,24 +176,23 @@
             <div class="contact__wrapper">
                 <h1>Contact me</h1>
                 <form>
-                    <label for="name">Name</label> 
+                    <label for="name">Name</label>
                     <input type="text" placeholder="Enter your name" class="input" id="name">
-                    <label for="email">Email</label> 
+                    <label for="email">Email</label>
                     <input type="email" placeholder="Enter your email" class="input" id="email">
                     <label for="message">Message</label>
                     <textarea rows="10" placeholder="Enter your message" class="input" id="message"></textarea>
                     <button onclick="">Send</button>
                     <div class="profile__links">
-                        <a href="https://www.instagram.com/sc0op_creator/" target="_blank"><img src="imgs/instagram.svg" alt=""></a>
+                        <a href="https://www.instagram.com/sc0op_creator/" target="_blank"><img src="imgs/instagram.svg"
+                                alt=""></a>
                         <a href="https://twitter.com/sc0op2" target="_blank"><img src="imgs/twitter.svg" alt=""></a>
-                        <a href="https://github.com/sc0op-creator" target="_blank"><img src="imgs/github.svg" alt=""></a>
+                        <a href="https://github.com/sc0op-creator" target="_blank"><img src="imgs/github.svg"
+                                alt=""></a>
                         <a href="https://discord.gg/UeWpgEMMEj" target="_blank"><img src="imgs/discord.svg" alt=""></a>
                     </div>
                 </form>
             </div>
-        </div>
-        <div class="popUp" id="popUp" onclick="showPopUp()">
-            <h1>Thanks a lot for you message.</h1>
         </div>
 
     </div>
