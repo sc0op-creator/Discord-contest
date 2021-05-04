@@ -91,7 +91,31 @@ function closeMenu(){
     var navbar = document.getElementById('navbar');
     var menu = document.getElementById('menu');
     var close = document.getElementById('close');
-    menu.style.display = 'block';
-    navbar.style.left = '-100%';
-    close.style.display = 'none';
+    if (close.style.display === 'block'){
+        menu.style.display = 'block';
+        navbar.style.left = '-100%';
+        close.style.display = 'none';
+    }
+}
+function checkForm (){
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    if (name.length < 1){
+        alert("Please enter a name greater than 1 character. Your name cannot be", name);
+    }
+    else if (email.length < 5){
+        alert("Enter a valid email");
+    }
+    else if (message.length < 10){
+        alert("Your message must be greater than 10 characters")
+    }
+    else {
+        var success = document.getElementById('success');
+        success.innerText = "Thanks " + name + " for you message";
+        success.style.display = 'block';
+        setTimeout(function(){
+            success.style.display = 'none';
+        }, 4000);
+    }
 }

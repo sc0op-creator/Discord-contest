@@ -169,6 +169,21 @@ html{
     width: 200px;
     margin-left: 5px;
     margin-right: 5px;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.about__details .languages .language__card img:hover{
+    animation: none;
+}
+@keyframes shake{
+    from{
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
 }
 .about__details .languages .language__card .content{
     width: 40%;
@@ -294,6 +309,17 @@ html{
 }
 .contact .contact__wrapper .profile__links img{
     height: 50px;
+}
+.thanks {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.thanks img {
+    margin-right: 20px;
+    height: 400px;
+    width: 400px;
 }
 @keyframes scroll {
 	0% {
